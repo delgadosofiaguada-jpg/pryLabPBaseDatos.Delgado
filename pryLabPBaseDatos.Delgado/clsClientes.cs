@@ -15,6 +15,7 @@ namespace pryLabPBaseDatos.Delgado
         private OleDbConnection conexion = new OleDbConnection();
         private OleDbCommand comando = new OleDbCommand();
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();
+       
         private String CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source = Clientes.mdb";
         private String Tabla = "Client";
 
