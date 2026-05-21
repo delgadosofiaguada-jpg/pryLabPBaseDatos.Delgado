@@ -67,6 +67,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Clientes.ldb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\fondo.jpg" />
     <EmbeddedResource Include="frmClientesDeudoresBD.resx">
       <DependentUpon>frmClientesDeudoresBD.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,9 +90,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Content Include="Clientes %281%29.ldb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,6 +105,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eeee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Clientes.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
