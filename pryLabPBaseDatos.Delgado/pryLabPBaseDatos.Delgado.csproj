@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsClientes.cs" />
+    <Compile Include="frmBusquedaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaCliente.Designer.cs">
+      <DependentUpon>frmBusquedaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClientesDeudoresBD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +79,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\fondo.jpg" />
+    <EmbeddedResource Include="frmBusquedaCliente.resx">
+      <DependentUpon>frmBusquedaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClientesDeudoresBD.resx">
       <DependentUpon>frmClientesDeudoresBD.cs</DependentUpon>
     </EmbeddedResource>

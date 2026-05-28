@@ -37,6 +37,7 @@
             this.listadoDeTodosLosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeLosClientesDeudoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeClientesOrdenadosPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarNuevosClientesToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.consultaDeUnClienteToolStripMenuItem,
             this.listadoDeTodosLosClientesToolStripMenuItem,
             this.listadoDeLosClientesDeudoresToolStripMenuItem,
@@ -78,12 +80,14 @@
             this.agregarNuevosClientesToolStripMenuItem.Name = "agregarNuevosClientesToolStripMenuItem";
             this.agregarNuevosClientesToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.agregarNuevosClientesToolStripMenuItem.Text = "Agregar nuevos clientes...";
+            this.agregarNuevosClientesToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevosClientesToolStripMenuItem_Click);
             // 
             // consultaDeUnClienteToolStripMenuItem
             // 
             this.consultaDeUnClienteToolStripMenuItem.Name = "consultaDeUnClienteToolStripMenuItem";
             this.consultaDeUnClienteToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.consultaDeUnClienteToolStripMenuItem.Text = "Consulta de un cliente...";
+            this.consultaDeUnClienteToolStripMenuItem.Click += new System.EventHandler(this.consultaDeUnClienteToolStripMenuItem_Click);
             // 
             // listadoDeTodosLosClientesToolStripMenuItem
             // 
@@ -104,6 +108,13 @@
             this.listadoDeClientesOrdenadosPorToolStripMenuItem.Name = "listadoDeClientesOrdenadosPorToolStripMenuItem";
             this.listadoDeClientesOrdenadosPorToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.listadoDeClientesOrdenadosPorToolStripMenuItem.Text = "Listado de clientes ordenados por...";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem1.Text = "Busqueda de cliente...";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // ventasToolStripMenuItem
             // 
@@ -142,5 +153,6 @@
         private System.Windows.Forms.ToolStripMenuItem listadoDeLosClientesDeudoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeClientesOrdenadosPorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

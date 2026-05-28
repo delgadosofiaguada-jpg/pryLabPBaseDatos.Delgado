@@ -22,6 +22,13 @@ namespace pryLabPBaseDatos.Delgado
 
         private Decimal deuda;
         private Int32 cantidad;
+
+        private Int32 idCli;
+        private String nom;
+        private Decimal deu;
+        private Decimal lim;
+        private Int32 idAu;
+
         public Decimal TotalDeuda
         {
             get { return deuda; }
@@ -30,6 +37,38 @@ namespace pryLabPBaseDatos.Delgado
         { 
             get { return cantidad; }
         }
+
+
+        public Int32 IDCliente
+        {
+            get { return idCli; }
+            set { idCli = value; }
+        }
+
+        public String Nombre
+        {
+            get {return nom; }
+            set { nom = value; }
+        }
+
+        public Decimal Deuda
+        {
+            get { return deu; }
+            set { deu = value; }
+        }
+
+        public Decimal Limite
+        {
+            get { return lim; }
+            set { lim = value; }
+        }
+
+        public Int32 IDAutomovil
+        {
+            get {return idAu; }
+            set {idAu=value; }
+        }
+
         public void ListarClientes(DataGridView Grilla)
         {
             try
@@ -130,6 +169,44 @@ namespace pryLabPBaseDatos.Delgado
                     AD.Close(); 
 
                 }
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+
+
+        }
+        public void Buscar(Int32 idCliente)
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.TableDirect;
+                comando.CommandText = Tabla;
+
+                OleDbDataReader DR = comando.ExecuteReader();
+
+                if (DR.HasRows)
+                {
+                    while (DR.Read())
+                    {
+                        if (DR.GetInt32(0)==idCliente)
+                        {
+                            idCli=DR.GetInt32(0); //CARGAMOS LOS DATOS
+                            nom = DR.GetString(1);
+                            deu = DR.GetDecimal(2);
+                            lim = DR.GetDecimal(3);
+                            idAu = DR.GetInt32(4);
+                        }
+                    }
+                }
+               
                 conexion.Close();
             }
             catch (Exception e)

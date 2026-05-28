@@ -28,5 +28,21 @@ namespace pryLabPBaseDatos.Delgado
             Form v = new frmListadoClientesBD();
             v.Show();
         }
+
+        private void consultaDeUnClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form v = new frmBusquedaCliente();
+            v.Show();
+        }
+
+        private void agregarNuevosClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
