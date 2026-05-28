@@ -28,18 +28,21 @@ namespace pryLabPBaseDatos.Delgado
             clsClientes x= new clsClientes();
             x.Buscar(IDCliente);
 
-            if (x.IDCliente == 0)
-            {
-                MessageBox.Show("Cliente no existente");
-            }
-            else
+            if (x.IDCliente != 0)
             {
                 lblNombreR.Text = x.Nombre;
                 lblDeudaR.Text = x.Deuda.ToString();
                 lblLimiteR.Text = x.Limite.ToString();
+                txtCodigo.Text = "";
+
+            }
+            else
+            {
+                
                 lblNombreR.Text = "";
                 lblDeudaR.Text = "";
-                lblLimiteR.Text="";
+                lblLimiteR.Text = "";
+                MessageBox.Show("Cliente no existente");
             }
         }
     }
