@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBusquedaCliente));
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.cmdBuscar = new System.Windows.Forms.Button();
             this.gbDatosCliente = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblDeuda = new System.Windows.Forms.Label();
-            this.lblbLimite = new System.Windows.Forms.Label();
-            this.lblNombreR = new System.Windows.Forms.Label();
-            this.lblDeudaR = new System.Windows.Forms.Label();
             this.lblLimiteR = new System.Windows.Forms.Label();
+            this.lblDeudaR = new System.Windows.Forms.Label();
+            this.lblNombreR = new System.Windows.Forms.Label();
+            this.lblbLimite = new System.Windows.Forms.Label();
+            this.lblDeuda = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.gbDatosCliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,25 +87,29 @@
             this.gbDatosCliente.Text = "Datos Cliente";
             this.gbDatosCliente.Enter += new System.EventHandler(this.gbDatosCliente_Enter);
             // 
-            // lblNombre
+            // lblLimiteR
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(22, 34);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(55, 15);
-            this.lblNombre.TabIndex = 4;
-            this.lblNombre.Text = "Nombre:";
+            this.lblLimiteR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLimiteR.Location = new System.Drawing.Point(153, 108);
+            this.lblLimiteR.Name = "lblLimiteR";
+            this.lblLimiteR.Size = new System.Drawing.Size(139, 23);
+            this.lblLimiteR.TabIndex = 9;
             // 
-            // lblDeuda
+            // lblDeudaR
             // 
-            this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeuda.Location = new System.Drawing.Point(22, 73);
-            this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(47, 15);
-            this.lblDeuda.TabIndex = 5;
-            this.lblDeuda.Text = "Deuda:";
+            this.lblDeudaR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDeudaR.Location = new System.Drawing.Point(153, 65);
+            this.lblDeudaR.Name = "lblDeudaR";
+            this.lblDeudaR.Size = new System.Drawing.Size(139, 23);
+            this.lblDeudaR.TabIndex = 8;
+            // 
+            // lblNombreR
+            // 
+            this.lblNombreR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombreR.Location = new System.Drawing.Point(153, 26);
+            this.lblNombreR.Name = "lblNombreR";
+            this.lblNombreR.Size = new System.Drawing.Size(139, 23);
+            this.lblNombreR.TabIndex = 7;
             // 
             // lblbLimite
             // 
@@ -116,29 +121,25 @@
             this.lblbLimite.TabIndex = 6;
             this.lblbLimite.Text = "Limite de crédito:";
             // 
-            // lblNombreR
+            // lblDeuda
             // 
-            this.lblNombreR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombreR.Location = new System.Drawing.Point(153, 26);
-            this.lblNombreR.Name = "lblNombreR";
-            this.lblNombreR.Size = new System.Drawing.Size(139, 23);
-            this.lblNombreR.TabIndex = 7;
+            this.lblDeuda.AutoSize = true;
+            this.lblDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeuda.Location = new System.Drawing.Point(22, 73);
+            this.lblDeuda.Name = "lblDeuda";
+            this.lblDeuda.Size = new System.Drawing.Size(47, 15);
+            this.lblDeuda.TabIndex = 5;
+            this.lblDeuda.Text = "Deuda:";
             // 
-            // lblDeudaR
+            // lblNombre
             // 
-            this.lblDeudaR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDeudaR.Location = new System.Drawing.Point(153, 65);
-            this.lblDeudaR.Name = "lblDeudaR";
-            this.lblDeudaR.Size = new System.Drawing.Size(139, 23);
-            this.lblDeudaR.TabIndex = 8;
-            // 
-            // lblLimiteR
-            // 
-            this.lblLimiteR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLimiteR.Location = new System.Drawing.Point(153, 108);
-            this.lblLimiteR.Name = "lblLimiteR";
-            this.lblLimiteR.Size = new System.Drawing.Size(139, 23);
-            this.lblLimiteR.TabIndex = 9;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(22, 34);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(55, 15);
+            this.lblNombre.TabIndex = 4;
+            this.lblNombre.Text = "Nombre:";
             // 
             // frmBusquedaCliente
             // 
@@ -149,6 +150,7 @@
             this.Controls.Add(this.cmdBuscar);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBusquedaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBusquedaCliente";

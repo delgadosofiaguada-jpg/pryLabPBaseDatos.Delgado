@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientesDeudoresBD));
             this.gbClientesDeudores = new System.Windows.Forms.GroupBox();
+            this.cmdReporte = new System.Windows.Forms.Button();
             this.cmdListarDeudores = new System.Windows.Forms.Button();
             this.lblProm = new System.Windows.Forms.Label();
             this.lblCantC = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.clUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDeuda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmdReporte = new System.Windows.Forms.Button();
             this.gbClientesDeudores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDatos)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,17 @@
             this.gbClientesDeudores.TabIndex = 4;
             this.gbClientesDeudores.TabStop = false;
             this.gbClientesDeudores.Text = "Clientes deudores";
+            // 
+            // cmdReporte
+            // 
+            this.cmdReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdReporte.Location = new System.Drawing.Point(19, 394);
+            this.cmdReporte.Name = "cmdReporte";
+            this.cmdReporte.Size = new System.Drawing.Size(128, 24);
+            this.cmdReporte.TabIndex = 8;
+            this.cmdReporte.Text = "Reporte";
+            this.cmdReporte.UseVisualStyleBackColor = true;
+            this.cmdReporte.Click += new System.EventHandler(this.cmdReporte_Click);
             // 
             // cmdListarDeudores
             // 
@@ -172,17 +183,6 @@
             this.clDeuda.MinimumWidth = 6;
             this.clDeuda.Name = "clDeuda";
             this.clDeuda.Width = 125;
-            // 
-            // cmdReporte
-            // 
-            this.cmdReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdReporte.Location = new System.Drawing.Point(19, 394);
-            this.cmdReporte.Name = "cmdReporte";
-            this.cmdReporte.Size = new System.Drawing.Size(128, 24);
-            this.cmdReporte.TabIndex = 8;
-            this.cmdReporte.Text = "Reporte";
-            this.cmdReporte.UseVisualStyleBackColor = true;
-            this.cmdReporte.Click += new System.EventHandler(this.cmdReporte_Click);
             // 
             // frmClientesDeudoresBD
             // 

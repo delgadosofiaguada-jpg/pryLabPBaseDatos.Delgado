@@ -22,5 +22,10 @@ namespace pryLabPBaseDatos.Delgado
             clsClientes x = new clsClientes();
             x.ListarClientes(dgvListado);
         }
+
+        private void frmListadoClientesBD_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

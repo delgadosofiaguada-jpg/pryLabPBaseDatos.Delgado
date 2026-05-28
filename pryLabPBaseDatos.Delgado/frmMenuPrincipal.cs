@@ -42,7 +42,13 @@ namespace pryLabPBaseDatos.Delgado
 
         private void agregarNuevosClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form v = new frmAgregarCliente();
+            v.Show();
+        }
 
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
