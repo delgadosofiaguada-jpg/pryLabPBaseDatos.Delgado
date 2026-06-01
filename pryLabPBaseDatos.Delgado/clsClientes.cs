@@ -235,8 +235,8 @@ namespace pryLabPBaseDatos.Delgado
 
                 fila["Nombre"] = nom;
                 fila["Deuda"] = 0;
-                fila["Límite"] = lim;
-                fila["idAutomovil"] = idAu;
+                fila["Limite"] = lim;
+                fila["Automovil"] = idAu;
 
                 tabla.Rows.Add(fila);
                 OleDbCommandBuilder ConciliaCambios = new OleDbCommandBuilder(adaptador);
