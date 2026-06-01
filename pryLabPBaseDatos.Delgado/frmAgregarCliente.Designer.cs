@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarCliente));
             this.gbCargarcliente = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblLimite = new System.Windows.Forms.Label();
-            this.lblAutomovil = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtLimite = new System.Windows.Forms.TextBox();
-            this.cmbAutomovil = new System.Windows.Forms.ComboBox();
             this.cmdCargar = new System.Windows.Forms.Button();
+            this.cmbAutomovil = new System.Windows.Forms.ComboBox();
+            this.txtLimite = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblAutomovil = new System.Windows.Forms.Label();
+            this.lblLimite = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.gbCargarcliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,23 +57,40 @@
             this.gbCargarcliente.TabStop = false;
             this.gbCargarcliente.Text = "Cargar Cliente";
             // 
-            // lblNombre
+            // cmdCargar
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(19, 41);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(107, 15);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre y Apellido";
+            this.cmdCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCargar.Location = new System.Drawing.Point(219, 198);
+            this.cmdCargar.Name = "cmdCargar";
+            this.cmdCargar.Size = new System.Drawing.Size(107, 23);
+            this.cmdCargar.TabIndex = 6;
+            this.cmdCargar.Text = "Cargar";
+            this.cmdCargar.UseVisualStyleBackColor = true;
+            this.cmdCargar.Click += new System.EventHandler(this.cmdCargar_Click);
             // 
-            // lblLimite
+            // cmbAutomovil
             // 
-            this.lblLimite.AutoSize = true;
-            this.lblLimite.Location = new System.Drawing.Point(19, 96);
-            this.lblLimite.Name = "lblLimite";
-            this.lblLimite.Size = new System.Drawing.Size(98, 15);
-            this.lblLimite.TabIndex = 1;
-            this.lblLimite.Text = "Límite de crédito";
+            this.cmbAutomovil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAutomovil.FormattingEnabled = true;
+            this.cmbAutomovil.Location = new System.Drawing.Point(166, 136);
+            this.cmbAutomovil.Name = "cmbAutomovil";
+            this.cmbAutomovil.Size = new System.Drawing.Size(160, 23);
+            this.cmbAutomovil.TabIndex = 5;
+            this.cmbAutomovil.SelectedIndexChanged += new System.EventHandler(this.cmbAutomovil_SelectedIndexChanged);
+            // 
+            // txtLimite
+            // 
+            this.txtLimite.Location = new System.Drawing.Point(166, 90);
+            this.txtLimite.Name = "txtLimite";
+            this.txtLimite.Size = new System.Drawing.Size(160, 21);
+            this.txtLimite.TabIndex = 4;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(166, 41);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(160, 21);
+            this.txtNombre.TabIndex = 3;
             // 
             // lblAutomovil
             // 
@@ -84,38 +101,23 @@
             this.lblAutomovil.TabIndex = 2;
             this.lblAutomovil.Text = "Automovil";
             // 
-            // txtNombre
+            // lblLimite
             // 
-            this.txtNombre.Location = new System.Drawing.Point(166, 41);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(160, 21);
-            this.txtNombre.TabIndex = 3;
+            this.lblLimite.AutoSize = true;
+            this.lblLimite.Location = new System.Drawing.Point(19, 96);
+            this.lblLimite.Name = "lblLimite";
+            this.lblLimite.Size = new System.Drawing.Size(98, 15);
+            this.lblLimite.TabIndex = 1;
+            this.lblLimite.Text = "Límite de crédito";
             // 
-            // txtLimite
+            // lblNombre
             // 
-            this.txtLimite.Location = new System.Drawing.Point(166, 90);
-            this.txtLimite.Name = "txtLimite";
-            this.txtLimite.Size = new System.Drawing.Size(160, 21);
-            this.txtLimite.TabIndex = 4;
-            // 
-            // cmbAutomovil
-            // 
-            this.cmbAutomovil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAutomovil.FormattingEnabled = true;
-            this.cmbAutomovil.Location = new System.Drawing.Point(166, 136);
-            this.cmbAutomovil.Name = "cmbAutomovil";
-            this.cmbAutomovil.Size = new System.Drawing.Size(160, 23);
-            this.cmbAutomovil.TabIndex = 5;
-            // 
-            // cmdCargar
-            // 
-            this.cmdCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCargar.Location = new System.Drawing.Point(219, 198);
-            this.cmdCargar.Name = "cmdCargar";
-            this.cmdCargar.Size = new System.Drawing.Size(107, 23);
-            this.cmdCargar.TabIndex = 6;
-            this.cmdCargar.Text = "Cargar";
-            this.cmdCargar.UseVisualStyleBackColor = true;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(19, 41);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(107, 15);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre y Apellido";
             // 
             // frmAgregarCliente
             // 
@@ -127,6 +129,7 @@
             this.Name = "frmAgregarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Cliente";
+            this.Load += new System.EventHandler(this.frmAgregarCliente_Load);
             this.gbCargarcliente.ResumeLayout(false);
             this.gbCargarcliente.PerformLayout();
             this.ResumeLayout(false);
