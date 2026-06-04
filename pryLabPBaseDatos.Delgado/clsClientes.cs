@@ -324,8 +324,8 @@ namespace pryLabPBaseDatos.Delgado
             try
             {
                 String sql = "";
-                sql = "INSERT INTO Cliente (Nombre, Deuda, Limite, IdAutomovil)";
-                sql = sql + "VALUES  ('" + nom + "',0," + lim.ToString() +", "+ idAu.ToString() + ")";
+                sql = " INSERT INTO Cliente (Nombre, Deuda, Limite, Automovil )";
+                sql = sql + " VALUES  ('" + nom + "',0," + lim.ToString() +", "+ idAu.ToString() + " )";
                 conexion.ConnectionString = CadenaConexion;
                 conexion.Open();
 
