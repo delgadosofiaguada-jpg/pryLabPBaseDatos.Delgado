@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarCliente));
             this.gbDatosCliente = new System.Windows.Forms.GroupBox();
+            this.txtLimite = new System.Windows.Forms.TextBox();
             this.lblDeudaR = new System.Windows.Forms.Label();
             this.lblNombreR = new System.Windows.Forms.Label();
             this.lblbLimite = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.cmdBuscar = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtLimite = new System.Windows.Forms.TextBox();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdModificar = new System.Windows.Forms.Button();
@@ -59,6 +59,14 @@
             this.gbDatosCliente.TabIndex = 7;
             this.gbDatosCliente.TabStop = false;
             this.gbDatosCliente.Text = "Datos Cliente";
+            // 
+            // txtLimite
+            // 
+            this.txtLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLimite.Location = new System.Drawing.Point(153, 116);
+            this.txtLimite.Name = "txtLimite";
+            this.txtLimite.Size = new System.Drawing.Size(135, 21);
+            this.txtLimite.TabIndex = 8;
             // 
             // lblDeudaR
             // 
@@ -136,14 +144,6 @@
             this.lblCodigo.TabIndex = 4;
             this.lblCodigo.Text = "Código del cliente:";
             // 
-            // txtLimite
-            // 
-            this.txtLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLimite.Location = new System.Drawing.Point(153, 116);
-            this.txtLimite.Name = "txtLimite";
-            this.txtLimite.Size = new System.Drawing.Size(135, 21);
-            this.txtLimite.TabIndex = 8;
-            // 
             // cmdEliminar
             // 
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -191,6 +191,7 @@
             this.Controls.Add(this.lblCodigo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEditarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar cliente";
             this.Load += new System.EventHandler(this.frmEditarCliente_Load);
             this.gbDatosCliente.ResumeLayout(false);

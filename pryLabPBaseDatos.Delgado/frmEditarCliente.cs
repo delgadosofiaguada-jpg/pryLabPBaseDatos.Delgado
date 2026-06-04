@@ -73,7 +73,13 @@ namespace pryLabPBaseDatos.Delgado
 
         private void limpiar()
         {
-           
+            txtLimite.Text = "";
+            lblNombreR.Text = "";
+            lblDeudaR.Text = "";
+            txtLimite.ReadOnly = false;
+            cmdEliminar.Enabled = false;
+            cmdModificar.Enabled = false;
+            cmdGuardar.Enabled = false;
         }
 
         private void cmdGuardar_Click(object sender, EventArgs e)
@@ -83,7 +89,7 @@ namespace pryLabPBaseDatos.Delgado
             x.Limite = Convert.ToDecimal(txtLimite.Text);
             x.Modificar(id);
             MessageBox.Show("El dato fue actualizado correctamente");
-            
+            limpiar();
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
@@ -93,6 +99,7 @@ namespace pryLabPBaseDatos.Delgado
 
             x.Eliminar(id);
             MessageBox.Show("Cliente Eliminado");
+            limpiar();
         }
     }
 }
