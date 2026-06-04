@@ -31,15 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarNuevosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeTodosLosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeLosClientesDeudoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDeUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeClientesOrdenadosPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,15 +66,23 @@
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarNuevosClientesToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.editarClienteToolStripMenuItem,
             this.listadoDeTodosLosClientesToolStripMenuItem,
             this.listadoDeLosClientesDeudoresToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.consultaDeUnClienteToolStripMenuItem,
-            this.listadoDeClientesOrdenadosPorToolStripMenuItem});
+            this.listadoDeClientesOrdenadosPorToolStripMenuItem,
+            this.consultaDeUnClienteToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -84,6 +93,13 @@
             this.agregarNuevosClientesToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.agregarNuevosClientesToolStripMenuItem.Text = "Agregar nuevos clientes...";
             this.agregarNuevosClientesToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevosClientesToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem1.Text = "Busqueda de cliente...";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // listadoDeTodosLosClientesToolStripMenuItem
             // 
@@ -98,13 +114,6 @@
             this.listadoDeLosClientesDeudoresToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.listadoDeLosClientesDeudoresToolStripMenuItem.Text = "Listado de los clientes deudores...";
             this.listadoDeLosClientesDeudoresToolStripMenuItem.Click += new System.EventHandler(this.listadoDeLosClientesDeudoresToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(260, 22);
-            this.toolStripMenuItem1.Text = "Busqueda de cliente...";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // consultaDeUnClienteToolStripMenuItem
             // 
@@ -125,12 +134,12 @@
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
-            // salirToolStripMenuItem
+            // editarClienteToolStripMenuItem
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.editarClienteToolStripMenuItem.Name = "editarClienteToolStripMenuItem";
+            this.editarClienteToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.editarClienteToolStripMenuItem.Text = "Editar cliente...";
+            this.editarClienteToolStripMenuItem.Click += new System.EventHandler(this.editarClienteToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -165,5 +174,6 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarClienteToolStripMenuItem;
     }
 }

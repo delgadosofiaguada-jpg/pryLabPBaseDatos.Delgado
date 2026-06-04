@@ -50,5 +50,11 @@ namespace pryLabPBaseDatos.Delgado
         {
             Close();
         }
+
+        private void editarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form v = new frmEditarCliente();
+            v.Show();
+        }
     }
 }

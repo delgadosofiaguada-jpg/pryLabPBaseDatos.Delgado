@@ -42,5 +42,19 @@ namespace pryLabPBaseDatos.Delgado
             cmbAutomovil.SelectedIndex = 0;
 
         }
+
+        private void cmdAgregar_Click(object sender, EventArgs e)
+        {
+            clsClientes x = new clsClientes();
+            x.Nombre = txtNombre.Text;
+            x.Limite = Convert.ToDecimal(txtLimite.Text);
+            x.IDAutomovil = Convert.ToInt32(cmbAutomovil.SelectedValue);
+            x.AgregarNuevoRegistro();
+
+            MessageBox.Show("Datos Grabados");
+            txtNombre.Text = "";
+            txtLimite.Text = "";
+            cmbAutomovil.SelectedIndex = 0;
+        }
     }
 }
