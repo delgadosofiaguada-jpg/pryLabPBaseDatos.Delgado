@@ -88,9 +88,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Clientes.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Clientes.ldb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Clientes.laccdb" />
     <None Include="Resources\fondo.jpg" />
     <EmbeddedResource Include="frmAgregarCliente.resx">
       <DependentUpon>frmAgregarCliente.cs</DependentUpon>
