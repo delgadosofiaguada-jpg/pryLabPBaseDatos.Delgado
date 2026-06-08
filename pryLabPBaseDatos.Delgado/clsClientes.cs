@@ -343,5 +343,39 @@ namespace pryLabPBaseDatos.Delgado
             }
 
         }
+
+        public void ListarForeach(DataGridView Grilla)
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.TableDirect;
+                comando.CommandText = Tabla;
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataSet DS = new DataSet();
+                adaptador.Fill(DS);
+
+                // Grilla.DataSource = DS.Tables[0];
+
+                if (DS.Tables[0].Rows.Count > 0)
+                { 
+                    foreach (DataRow fila in DS.Tables[0].Rows)
+                    {
+                        Grilla.Rows.Add(fila["idCliente"], fila["Nombre"], fila["Deuda"], fila["Limite"], fila["Automovil"]);
+                    }
+                }
+                conexion.Close();
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+        }
     }
 }

@@ -28,11 +28,12 @@ namespace pryLabPBaseDatos.Delgado
             x.ListarDeudoresBD(dgvConsultaDatos);
             lblCantC.Text = x.CantidadDeudores.ToString();
             lblTot.Text = x.TotalDeuda.ToString();
+            lblProm.Text = (x.TotalDeuda / x.CantidadDeudores).ToString("0.00");
         }
 
         private void cmdReporte_Click(object sender, EventArgs e)
         {
-            clsClientes x = new clsClientes();
+            SaveDialog
             x.ReporteCliente();
             MessageBox.Show("Reporte generado con exito");
         }
